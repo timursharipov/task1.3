@@ -19,6 +19,8 @@ foreach ($animalsContinent as $continent => $animals) {
 
 echo '<font color="red"> <h1> Новый массив: </h1> </font>';
 
+$new_array = array();			// задаем массив
+
 foreach ($animalsContinent as $continent => $animals) {
 	foreach ($animals as $animal) {
 		$result = str_word_count ($animal);
@@ -34,15 +36,16 @@ echo '<pre/>';
 
 echo '<font color="red"> <h1> Перемешиваем слова: </h1> </font>';
 
+
 foreach ($new_array as $animal) {
 	$newAnimal = explode (" ", $animal);
 	shuffle($newAnimal);
 	$newAnimal2 = implode (" ", $newAnimal);
-	
+
 	echo '<pre>';
 	print_r($newAnimal2);
 	echo '<pre/>'; 
-
 }
+
 
 ?>
